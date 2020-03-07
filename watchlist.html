@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Scene It-Main</title>
+	<title>Scene It-Watchlist</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -12,29 +12,23 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="data.js"></script>
-	<script src="index.js"></script>
+    <script src="index.js"></script>
+    <script src="watchlist.js"></script>
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-12 header text-center">
-				<h2 class="display-2">Scene It</h2>
-				<p>Search for movies you want to watch.</p>
-				<p>Save them to your list</p>
-				<h4 id="watchlistLink"><a href="watchlist.html">Go to my Watchlist</a></h4>
+                <h2 class="display-2">Scene It</h2>
+                <br>
+                <h2>My Watchlist!</h2>
+                
+                <h3><a style="text-decoration: none; color: inherit;" href="index.html">Return to Search!</a></h3>
+				
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-12 search">
-				<form id="myForm">
-					<div class="input-group input-group-lg">
-						<input class="form-control search-bar" placeholder="Search for a movie...">	
-						<button class="btn btn-primary input-group-btn" type="submit">Search</button>
-				    </div>
-				</form>
-			</div>
-		</div>
+		
 		<div class="row">
 			<div class="col-12 results">
 

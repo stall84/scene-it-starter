@@ -14,6 +14,12 @@ body {
 	margin-top: 20px;
 }
 
+#watchlistLink>a {
+
+	text-decoration: none !important;
+	color:#DC4247;
+}
+
 #movies-container {
 
 	display: flex;
