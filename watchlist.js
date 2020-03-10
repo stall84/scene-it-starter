@@ -22,3 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         return movieHTML;
     }
+
+    var container = document.getElementById('watchlist-container');
+    container.innerHTML = renderMovies(JSON.parse(localStorage.getItem("watchlist")));
+});
