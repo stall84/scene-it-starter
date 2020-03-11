@@ -1,5 +1,9 @@
+// creating variable to hold the response.data.search from our axios get request at bottom of page. declared the variable
+// in the outermost global scope so that I could have access to it in any of the functions.
+var movieSearch; 
+
 function saveToWatchlist(imdbID) {
-    var movie = movieData.find(function (currentMovie) {
+    var movie = movieSearch.find(function (currentMovie) {
         return currentMovie.imdbID == imdbID
     });
     var watchlistJSON = localStorage.getItem('watchlist');
@@ -40,11 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
         var searchString = document.getElementById('search-bar').value;
         var urlEncodedSearchString = encodeURIComponent(searchString);
         console.log(urlEncodedSearchString);
-        axios.get(`http://www.omdbapi.com/?apikey=62a1b7d1&s=${urlEncodedSearchString}`).then(response => {console.log(response.data)});
+        // using ES6 syntax on an axios/jquery get request to pull down the search results from the omdb ip. assign this query result to the global
+        // variable moiveSearch we declared in the global scope at top 
+        axios.get(`http://www.omdbapi.com/?apikey=62a1b7d1&s=${urlEncodedSearchString}`).then(response => {var movieContainer = document.getElementById('movies-container');
+        movieSearch = response.data.Search;
+        movieContainer.innerHTML = renderMovies(response.data.Search);});
 
 
-        var movieContainer = document.getElementById('movies-container');
-        movieContainer.innerHTML = renderMovies(movieData);
+        
     })
 
-})
+});
