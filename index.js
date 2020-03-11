@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var searchString = document.getElementById('search-bar').value;
         var urlEncodedSearchString = encodeURIComponent(searchString);
         console.log(urlEncodedSearchString);
+        axios.get(`http://www.omdbapi.com/?apikey=62a1b7d1&s=${urlEncodedSearchString}`).then(response => {console.log(response.data)});
 
 
         var movieContainer = document.getElementById('movies-container');
