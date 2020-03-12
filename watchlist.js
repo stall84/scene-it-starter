@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderMovies (movieArray) {
 
         var movieHTML = movieArray.map(function (currentMovie) {
-
+            // The fix to the 'poster object returning null' error was just to add an alternate image placeholder.
             return `
 
             <div class="movie card m-2" style="width: 15rem;">
-                <img class="card-img-top" src="${currentMovie.Poster}">
+                <img class="card-img-top" src="${currentMovie.Poster}" alt="movie poster">
                     <div class="card-body">
                         <h3 class="card-title">${currentMovie.Title}</h3>
                         <h6 class="release-date">${currentMovie.Year}</h6>
