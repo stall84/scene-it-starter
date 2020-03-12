@@ -42,3 +42,10 @@ body {
 	flex-wrap: wrap;
 	text-align: center;
 }
+
+#toWatchContainer {
+	
+	display: flex;
+	flex-direction: row;
+
+}

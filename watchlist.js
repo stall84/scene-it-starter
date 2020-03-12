@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     localStorage.getItem('watchlist');
 
+    //function addToWatchedList (imdbID) {
+
+
+    //}
+
+
+
     function renderMovies (movieArray) {
 
         var movieHTML = movieArray.map(function (currentMovie) {
@@ -13,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body">
                         <h3 class="card-title">${currentMovie.Title}</h3>
                         <h6 class="release-date">${currentMovie.Year}</h6>
-                        <button class="btn btn-primary" name="watchedButton" onclick="">Watched</button>
+                        <button class="btn btn-primary" name="watchedButton" onclick="">I've watched already!</button>
                     </div>
             </div>
 
@@ -23,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return movieHTML;
     }
 
-    var container = document.getElementById('watchlist-container');
-    container.innerHTML = renderMovies(JSON.parse(localStorage.getItem("watchlist")));
+    var toWatchContainer = document.getElementById('toWatchContainer');
+    toWatchContainer.innerHTML = renderMovies(JSON.parse(localStorage.getItem("watchlist")));
 });
