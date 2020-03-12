@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body">
                         <h3 class="card-title">${currentMovie.Title}</h3>
                         <h6 class="release-date">${currentMovie.Year}</h6>
-                        <button class="btn btn-primary" name="addButton onclick="saveToWatchlist(${currentMovie.imdbID})">Add</button>
+                        <button class="btn btn-primary" name="watchedButton" onclick="">Watched</button>
                     </div>
             </div>
 
